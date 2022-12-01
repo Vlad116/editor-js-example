@@ -1,0 +1,89 @@
+.root {
+  background: #fff;
+  padding: 20px;
+  margin: 20px 0;
+
+  &__wrap {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e2e2;
+
+    :hover {
+      .root__controls svg {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__editable {
+    background: rgb(244, 246, 250);
+    padding: 10px;
+
+    &:empty:before {
+      content: attr(placeholder);
+      pointer-events: none;
+    }
+  }
+
+  &__description {
+    flex: 1 0 50%;
+
+    & input {
+      width: 100%;
+      margin-bottom: 10px;
+      box-shadow: 0 0 4px rgba(30, 34, 46, 0.16),
+        0 4px 12px rgba(30, 34, 46, 0.08);
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+  }
+
+  &__label {
+    width: 150px;
+    height: 70px;
+
+    & img {
+      width: 150px;
+      height: 70px;
+      margin-left: -4px;
+      margin-top: -4px;
+      border-radius: 3px;
+      object-fit: cover;
+    }
+
+    & input {
+      display: none;
+    }
+  }
+
+  &__button_text {
+    padding: 0 10px;
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+
+    & svg {
+      opacity: 0.2;
+      transition: 0.4s all;
+
+      & path {
+        fill: color(black);
+      }
+
+      :hover {
+        & path {
+          fill: color(blue, 40);
+        }
+      }
+    }
+  }
+
+  &__add_slide {
+    cursor: pointer;
+  }
+}

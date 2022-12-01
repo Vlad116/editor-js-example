@@ -1,0 +1,38 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__input {
+    box-shadow: 0 0 4px rgba(30, 34, 46, 0.16),
+      0 4px 12px rgba(30, 34, 46, 0.08);
+    border: 1px solid transparent;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+
+  &__error {
+    color: red;
+  }
+
+  &__success {
+    border: 1px solid green;
+  }
+
+  &__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 46px;
+    max-height: 300px;
+
+    & img {
+      max-width: 100%;
+    }
+
+    & input {
+      display: none;
+    }
+  }
+}

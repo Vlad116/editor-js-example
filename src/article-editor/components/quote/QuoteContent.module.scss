@@ -1,0 +1,11 @@
+.root {
+  border-left: 2px solid #476bf0;
+  padding: 10px;
+
+  &__editable {
+    &:empty:before {
+      content: attr(placeholder);
+      pointer-events: none;
+    }
+  }
+}

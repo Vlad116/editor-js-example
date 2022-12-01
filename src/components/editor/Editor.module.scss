@@ -1,0 +1,24 @@
+.root {
+  &__wrapper {
+  }
+
+  &__modal {
+    display: flex;
+    justify-content: flex-start;
+    overflow: auto;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgb(221, 221, 221);
+    position: sticky;
+    bottom: 0;
+    z-index: 9999;
+    background: #f4f6fa;
+  }
+}
+
+:global(.cdx-notifies) {
+  z-index: 1000;
+}
